@@ -1,37 +1,43 @@
-#include <iostream>
-#include <iomanip>
-#include <cmath>
+##include <iostream>  // Include the input/output stream library
+#include <iomanip>   // Include the input/output manipulation library
+#include <cmath>     // Include the math library
 
-using namespace std;
+using namespace std;  // Use the standard namespace to simplify code
+
 int main()
 {
+    double ct, cte, cts, cto, ctt;  // Cost and discount values
+    
+    cout << "Enter the cost of your groceries\n";  // Ask the user to how much their groceries were.
+    cin >> ct;  //store the user input in the 'ct' variable
 
-double ct, cte, cts, cto, ctt;
-    cout<<"Enter the cost of your groceries\n";
-    cin>>ct;
+    // Calculates the discount value
+    cte = ct * 0.08;
+    cts = ct * 0.10;
+    cto = ct * 0.12;
+    ctt = ct * 0.14;
 
-cte=ct*0.08;
-cts=ct*0.10;
-cto=ct*0.12;
-ctt=ct*0.14;
-
-   if (ct>10 && ct<61)
+    // Checks different purchase amount ranges and provides discounts for the cost
+    
+    if (ct > 10 && ct < 61)
     {
-            cout<<"You win a discount coupon of $"<<cte<<" (8% of your purchase)";
-   }
-    else if (ct>60 && ct<151)
-    {
-         cout<<"You win a discount coupon of $"<<cts<<" (10% of your purchase)";
+        cout << "You win a discount coupon of $" << cte << " (8% of your purchase)";
     }
-   else if (ct>150 && ct<211)
+    else if (ct > 60 && ct < 151)
     {
-        cout<<"You win a discount coupon of $"<<cto<<" (12% of your purchase)";
-   }
-   else if (ct>210)
+        cout << "You win a discount coupon of $" << cts << " (10% of your purchase)";
+    }
+    else if (ct > 150 && ct < 211)
     {
-         cout<<"You win a discount coupon of $"<<ctt<<" (14% of your purchase)";
-   }
-   
-   else cout<<"You haven't spent enough money to receive a discount";
-   
-   }
+        cout << "You win a discount coupon of $" << cto << " (12% of your purchase)";
+    }
+    else if (ct > 210)
+    {
+        cout << "You win a discount coupon of $" << ctt << " (14% of your purchase)";
+    }
+    else
+    {
+        cout << "You haven't spent enough money to receive a discount"; //displays a message telling the user they haven't received a discount
+    }
+}
+
