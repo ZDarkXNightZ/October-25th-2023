@@ -2,7 +2,7 @@
 #include <iomanip>   // Include the input/output manipulation library
 #include <cmath>     // Include the math library
 
-using namespace std;  // Use the standard namespace to simplify code
+using namespace std;  // Use the standard namespace
 
 int main()
 {
