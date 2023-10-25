@@ -1,28 +1,25 @@
-#include <iostream>
-using namespace std;
+#include <iostream>  // Include the input/output stream library
+
+using namespace std;  // Use the standard namespace
 
 int main()
 {
-    string yeeee = "yes";
-    string nahhh = "no";
-    string answer;
-     bool isCorrect = true;
+    string yeeee = "yes";   // Define string yeeee as "yes"
+    string nahhh = "no";    // Define string nahhh "no" 
+    string answer;          // String variable to store the user input
 
-    cout<<"This program may reformat your hard disk. Do you wish to continue (yes/no)?\n";
-    cin>>answer;
+    cout << "This program may reformat your hard disk. Do you wish to continue (yes/no)?\n";  // Display the warning/question
+    cin >> answer;  // Store the user input
 
-    if(answer==yeeee)
+    if (answer == yeeee)  // Check if the user's response is "yes."
     {
-     cout << "Bye bye data .\n";
+        cout << "Bye bye data.\n";  // If it's "yes," display the message saying it was deleted
     }
-   
-    else if(answer==nahhh)
+    else if (answer == nahhh)  // Check if the user's response is "no."
     {
-        cout<<"Wise Choice.\n";
+        cout << "Wise Choice.\n";  // If it's "no," display the message saying it wasn't deleted
     }
-   
     else {
-        cout << "That was not a yes or no, so I guess I will trash your disk!\n";
+        cout << "That was not a yes or no, so I guess I will trash your disk!\n";  // If the response is neither "yes" nor "no," display a warning message.
     }
-
 }
